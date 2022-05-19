@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[]args){
         //4*4=16マスのBoardの初期化
@@ -36,8 +37,14 @@ public class Main {
         }
 
         //Player2人を初期化
-        Player A=new Player("A");
-        Player B=new Player("B");
+        Scanner scanner=new Scanner(System.in);
+        System.out.print("What's the name of first Player?: ");
+        String str=scanner.next();
+        Player A=new Player(str);
+        System.out.print("What's the name of second Player?: ");
+        str=scanner.next();
+        Player B=new Player(str);
+        System.out.println();
         //ゲームマスター的な
         Game G=new Game();
         //クアルトをプレイ
