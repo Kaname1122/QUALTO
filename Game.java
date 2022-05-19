@@ -110,7 +110,7 @@ public class Game {
         return false;
     }
 
-    
+
     //どの様にな条件で勝ったか
     /*
     void howWin(){}
@@ -120,6 +120,8 @@ public class Game {
 
     //クアルトをプレイ
     void Qualto(Player A, Player B, Board[][]board, Piece piece[]){
+        System.out.println("Qualto Start!");
+        System.out.println();
         Piece p=new Piece();
         while(true){
             p=B.SelectPiece(piece);
@@ -139,9 +141,6 @@ public class Game {
                 break;
             }
         }   
+        System.out.println("Thank you for playing Qualto!");
     }
 }
-       
-
-
-
