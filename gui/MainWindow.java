@@ -1,5 +1,6 @@
 package qualto.gui;
 
+import qualto.main;
 import javax.swing.*;
 
 // Mainwindow class
