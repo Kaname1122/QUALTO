@@ -1,6 +1,5 @@
-package qualto.main;
-
 import java.util.Arrays;
+
 public class Game {
      //マスが埋まっているか判定　埋まっていれば引き分け
      boolean isFull(Board[][]board){
@@ -122,7 +121,7 @@ public class Game {
 
     //クアルトをプレイ
     void Qualto(Player A, Player B, Board[][]board, Piece piece[]){
-        System.out.println("Qualto Start!");
+        System.out.println("Quarto Start!");
         System.out.println();
         Piece p=new Piece();
         while(true){
@@ -143,6 +142,6 @@ public class Game {
                 break;
             }
         }   
-        System.out.println("Thank you for playing Qualto!");
+        System.out.println("Thank you for playing Quarto!");
     }
 }

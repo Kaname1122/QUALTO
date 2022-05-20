@@ -1,26 +1,30 @@
-package qualto.gui;
-
-import qualto.main;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 
-// Mainwindow class
+// MainWindow class
 public class MainWindow extends JFrame {
-    // Mainwindow constructor
+    // constructor
     public MainWindow() {
-        // Set window title
-        setTitle("QUALTO");
-        // Set window size
-        setSize(800, 600);
-        // Set window location
-        setLocation(100, 100);
-        // Set window to close when closed
+        // MainWindow class
+        super("QUARTO");
+        // MainWindow class
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        // Set window to visible
+        // MainWindow class
+        setSize(800, 600);
+        // MainWindow class
         setVisible(true);
+
+        JButton startButton = new JButton("Start");
+        JButton rulesButton = new JButton("Rules");
+
+        JPanel panel = new JPanel();
+        panel.add(startButton);
+        panel.add(rulesButton);
+
+        Container contentPane = getContentPane();
+        contentPane.add(panel, BorderLayout.CENTER);
+
     }
 
-    // show window
-    public static void main(String[] args) {
-        new MainWindow();
-    }
 }

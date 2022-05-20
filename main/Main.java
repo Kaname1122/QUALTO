@@ -1,6 +1,5 @@
-package qualto.main;
-
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[]args){
         //4*4=16マスのBoardの初期化

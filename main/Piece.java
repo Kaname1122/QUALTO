@@ -1,5 +1,3 @@
-package qualto.main;
-
 public class Piece{
     int[]state;
     boolean isUsed;//盤に置かれたか　Falese:置かれてない　True：置かれた
