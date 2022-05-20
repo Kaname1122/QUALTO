@@ -1,3 +1,5 @@
+package qualto.main;
+
 public class Board {
     boolean isPut;//Pieceが置かれてなければFalse, 置かれてたらTrue
     int[]state;//Board型のstate初期値は{-1, -1, -1, -1}として、BoardにPieceを置く際Pieceのstateを上書きする。

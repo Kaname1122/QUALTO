@@ -1,3 +1,5 @@
+package qualto.main;
+
 import java.util.Arrays;
 public class Game {
      //マスが埋まっているか判定　埋まっていれば引き分け
