@@ -1,5 +1,10 @@
 import java.util.Scanner;
+import java.io.*;
+import java.net.*;
+
+
 public class Main {
+    public static Connection P1 =new Connection();
     public static void main(String[]args){
         //4*4=16マスのBoardの初期化
         Board[][] board=new Board[4][4];
@@ -35,19 +40,28 @@ public class Main {
             }
             piece[i]=new Piece(initPiece[i]);
         }
+        
+        try{
+            P1.makeserver();
+            //Player2人を初期化
+            Scanner scanner=new Scanner(System.in);
+            System.out.print("What's the name of first Player?: ");
+            String str=scanner.next();
+            Player A=new Player(str);
 
-        //Player2人を初期化
-        Scanner scanner=new Scanner(System.in);
-        System.out.print("What's the name of first Player?: ");
-        String str=scanner.next();
-        Player A=new Player(str);
-        System.out.print("What's the name of second Player?: ");
-        str=scanner.next();
-        Player B=new Player(str);
-        System.out.println();
-        //ゲームマスター的な
-        Game G=new Game();
-        //クアルトをプレイ
-        G.Qualto(A, B, board, piece);    
+
+            P1.out.println("What's the name of second Player?: ");
+            str = P1.in.readLine();
+            System.out.println(str);
+            Player B=new Player(str);
+            B.isServer=false;
+            System.out.println();
+            //ゲームマスター的な
+            Game G=new Game();
+            //クアルトをプレイ
+            G.Qualto(A, B, board, piece);   
+        }catch(IOException e){
+            System.out.println(e);
+        } 
     }
 }
