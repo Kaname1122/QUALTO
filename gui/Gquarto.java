@@ -61,7 +61,7 @@ public class Gquarto extends JPanel {
     }
 
     // クリックのイベントクラス
-    public class MouseEv implements MouseListener {
+    public class MouseEv implements MouseAdapter {
         public void mouseClicked(MouseEvent e) {
             // クリックした位置を取得
             int x = e.getX();
@@ -79,10 +79,6 @@ public class Gquarto extends JPanel {
                 System.out.println("x:" + x3 + " y:" + y3);
             }
         }
-        public void mousePressed(MouseEvent e) {}
-        public void mouseReleased(MouseEvent e) {}
-        public void mouseEntered(MouseEvent e) {}
-        public void mouseExited(MouseEvent e) {}
     }
 
     // コマオブジェクト
