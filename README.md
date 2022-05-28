@@ -1,2 +1,2 @@
-# QUALTO
-make QUALTO software for Info experiment B
+# QUARTO
+make QUARTO software for Info experiment B
