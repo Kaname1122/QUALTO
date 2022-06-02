@@ -55,11 +55,13 @@ public class Main {
             System.out.println(str);
             Player B=new Player(str);
             B.isServer=false;
+            B.isMyTurn=false;
+            
             System.out.println();
             //ゲームマスター的な
             Game G=new Game();
             //クアルトをプレイ
-            G.Qualto(A, B, board, piece);   
+            G.Quarto(A, B, board, piece);   
         }catch(IOException e){
             System.out.println(e);
         } 

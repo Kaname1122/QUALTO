@@ -1,5 +1,9 @@
 import java.util.Arrays;
+import java.util.Scanner;
 import java.io.*;
+import java.net.*;
+
+
 public class Game {
      //マスが埋まっているか判定　埋まっていれば引き分け
      boolean isFull(Board[][]board){
@@ -10,7 +14,7 @@ public class Game {
                 }
             }
         }
-        System.out.println("引き分けです");
+        Player.announce("引き分けです。");
         return true;
     }
 
@@ -33,7 +37,7 @@ public class Game {
                         j++;
                     }
                     if(j==4){
-                        System.out.println("Player "+player.name+" Wins!!");
+                        Player.announce("Player "+player.name+" Wins!!");
                         return true;
                     }
                     i++;
@@ -57,7 +61,7 @@ public class Game {
                         j++;
                     }
                     if(j==4){
-                        System.out.println("Player "+player.name+" Wins!!");
+                        Player.announce("Player "+player.name+" Wins!!");
                         return true;
                     }
                     i++;
@@ -81,7 +85,7 @@ public class Game {
                     j++;
                 }
                 if(j==4){
-                    System.out.println("Player "+player.name+" Wins!!");
+                    Player.announce("Player "+player.name+" Wins!!");
                     return true;
                 }
                 i++;
@@ -102,7 +106,7 @@ public class Game {
                     j++;
                 }
                 if(j==4){
-                    System.out.println("Player "+player.name+" Wins!!");
+                    Player.announce("Player "+player.name+" Wins!!");
                     return true;
                 }
                 i++;
@@ -117,12 +121,9 @@ public class Game {
     void howWin(){}
     */
 
-
-
     //クアルトをプレイ
-    void Qualto(Player A, Player B, Board[][]board, Piece piece[]){
-        System.out.println("Qualto Start!");
-        System.out.println();
+    void Quarto(Player A, Player B, Board[][]board, Piece piece[]){
+        Player.announce("Quarto Start!");
         Piece p=new Piece();
         while(true){
             p=B.SelectPiece(piece);
@@ -141,11 +142,7 @@ public class Game {
             if(isFull(board)){
                 break;
             }
-        }   
-        System.out.println("Thank you for playing Qualto!");
-    }
-    void Qualtoc(){
-        String str = in.readLine();
-        System.out.println(str);
+        }
+        Player.announce("Thank you for playing Quarto!");
     }
 }

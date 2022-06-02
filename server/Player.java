@@ -2,13 +2,16 @@ import java.util.Scanner;
 import java.util.Arrays;
 import java.io.*;
 import java.net.*;
+
 public class Player {
     String name;
     boolean isServer;
+    boolean isMyTurn;
 
     public Player(String name){
         this.name=name;
         this.isServer=true;
+        this.isMyTurn=true;
     }
     //コマを選んで渡す
     Piece SelectPiece(Piece[]piece){
